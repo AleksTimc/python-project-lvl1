@@ -14,7 +14,6 @@ def even_game():
         random = random.randint(1, 50)
         print('Question: ' + str(random))
         quest_answer = answer()
-        print(quest_answer)
         is_even = random % 2
         if is_even == 0 and \
             quest_answer == 'yes' \
