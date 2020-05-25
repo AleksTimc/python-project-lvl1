@@ -24,11 +24,11 @@ def even_game():
             result = result + 1
         else:
             if is_even == 1:
-                print(quest_answer + " is wrong answer ;(. n\
-                     Correct answer was 'no'.")
+                print(quest_answer + " is wrong answer ;(."
+                      "Correct answer was 'no'.")
             else:
-                print(quest_answer + " is wrong answer ;(. n\
-                    Correct answer was 'yes'.")
+                print(quest_answer + " is wrong answer ;(."
+                      "Correct answer was 'yes'.")
             print("Let's try again, " + gamer_name)
             break
     if result == 3:
