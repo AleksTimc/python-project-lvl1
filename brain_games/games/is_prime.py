@@ -8,7 +8,10 @@ def is_prime():
     print('Question: ' + str(random))
     quest_answer = answer()
     final = []
-    if isprime(random) is True and quest_answer == 'yes':
+    if isprime(random) is True and \
+        quest_answer == 'yes' \
+        or isprime(random) is False \
+            and quest_answer == 'no':
         return True
     else:
         final.append(quest_answer)
