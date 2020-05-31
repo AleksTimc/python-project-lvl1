@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "AlekcTimc_brain_games"
-version = "1.4.6"
+version = "1.4.7"
 description = ""
 authors = ["atimchenko <taa@nic.ru>"]
 packages = [
