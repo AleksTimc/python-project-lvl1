@@ -19,6 +19,16 @@ def randomint():
     return randomint
 
 
+def randstep():
+    randstep = random.randint(1, 10)
+    return randstep
+
+
+def randstep_quest():
+    randstep_quest = random.randint(0, 9)
+    return randstep_quest
+
+
 def rand_operator():
     operatorlist = ['*', '+', '-']
     return random.choice(operatorlist)
