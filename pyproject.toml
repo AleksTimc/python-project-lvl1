@@ -1,11 +1,16 @@
 [tool.poetry]
 name = "AlekcTimc_brain_games"
-version = "1.4.7"
-description = ""
+version = "1.4.8"
+description = "Test project on Hexlet"
 authors = ["atimchenko <taa@nic.ru>"]
+repository = "https://github.com/AleksTimc/python-project-lvl1"
 packages = [
   { include = "brain_games" },]
-  
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
 [tool.poetry.dependencies]
 python = "^3.6"
 prompt = "^0.4.1"
