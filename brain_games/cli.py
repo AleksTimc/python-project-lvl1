@@ -38,24 +38,24 @@ def greet():
     print('Welcome to the Brain Games!')
 
 
-def is_number(str):
-    try:
-        float(str)
-        return True
-    except ValueError:
-        return False
-
-
-def game_instruction(game_name):
-    if game_name.__name__ == 'is_prime':
-        print('Answer "yes" if given number is prime. Otherwise answer "no".')
-    elif game_name.__name__ == 'progressive':
-        print('What number is missing in the progression?')
-    elif game_name.__name__ == 'brain_gcd':
-        print('Find the greatest common divisor of given numbers.')
-    elif game_name.__name__ == 'even_game':
-        print('Answer "yes" if number even otherwise answer "no"')
-    elif game_name.__name__ == 'brain_calc':
-        print('What is the result of the expression?')
-    else:
-        print('i dont know this game')
+def game_engine2(game):
+    greet()
+    game_explain = game()
+    print(game_explain['instruction'])
+    name = welcome_user()
+    rounds = 3
+    attempt = 0
+    while attempt < rounds:
+        result = game()
+        print('Question: ' + str(result['quest']))
+        quest_answer = answer()
+        if str(quest_answer) == str(result['true_answer']):
+            print('Correct!')
+            attempt += 1
+        else:
+            print(str(quest_answer) + " is wrong answer ;(."
+                  "Correct answer was " + str(result['true_answer']) + ".")
+            print("Let's try again," + name)
+            break
+    if attempt == rounds:
+        print('Congratulations, ' + name)

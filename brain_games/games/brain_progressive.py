@@ -1,4 +1,4 @@
-from brain_games.cli import answer, randomint, randstep, randstep_quest
+from brain_games.cli import randomint, randstep, randstep_quest
 
 
 def progressive():
@@ -9,13 +9,13 @@ def progressive():
     quest = list(range(num_one, num_two, step))
     quest2 = list(range(num_one, num_two, step))
     quest2[step_for_quest] = '..'
-    print('Question: ', end="")
-    print(*quest2, sep=" ")
-    quest_answer = answer()
-    final = []
-    if quest_answer == str(quest[step_for_quest]):
-        return True
-    else:
-        final.append(str(quest_answer))
-        final.append(str(quest[step_for_quest]))
-        return final
+    quest_str = ' '.join(str(element) for element in quest2)
+    game_parts = {}
+    game_parts['instruction'] = 'What number is missing in the progression?'
+    game_parts['quest'] = quest_str
+    game_parts['true_answer'] = quest[step_for_quest]
+    return game_parts
+
+
+def main():
+    progressive()

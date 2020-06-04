@@ -25,7 +25,7 @@ brain-even = "brain_games.scripts.brain_games:sec"
 brain-calc = "brain_games.scripts.brain_games:main"
 brain-gcd = "brain_games.scripts.brain_games:gcd_game"
 brain-progressive = "brain_games.scripts.brain_games:progressive_game"
-brain-isprime = "brain_games.scripts.brain_games:isprime_game"
+brain-isprime = "brain_games.scripts.brain_games:is_prime_game"
 
 [build-system]
 requires = ["poetry>=0.12"]
