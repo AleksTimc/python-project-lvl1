@@ -9,21 +9,21 @@ python:
 before_install:
   # make depends on poetry
   - pip install poetry
-  - pip install -r requirements.txt
-  - pip install coverage
-
-before_script:
-  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-  - chmod +x ./cc-test-reporter
-
+  
 install:
   - make install
 
-script:
-  - make check
-
 env:
   global:
-    - GIT_COMMITTED_AT=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then git log -1 --pretty=format:%ct; else git log -1 --skip 1 --pretty=format:%ct; fi)
-    - CODECLIMATE_REPO_TOKEN=[5ec7816bc046cd014e00c413]
-    - CC_TEST_REPORTER_ID=[ad97e6a405404425448da8672c59459013133d655a7d3b25bab2ba275bf79f8b]
+    - CC_TEST_REPORTER_ID=ad97e6a405404425448da8672c59459013133d655a7d3b25bab2ba275bf79f8b
+rvm:
+  - 2.2.0
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+script:
+  - bundle exec rspec
+  - make check
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
