@@ -9,10 +9,9 @@ def even_game():
     game_parts['quest'] = random
     if random % 2 == 0:
         game_parts['true_answer'] = 'yes'
-        return game_parts
     else:
         game_parts['true_answer'] = 'no'
-        return game_parts
+    return game_parts
 
 
 def sec():
