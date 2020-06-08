@@ -1,12 +1,13 @@
 from brain_games.cli import randomint
 
 
-def brain_gcd():
+INSTRUCTION = 'Find the greatest common divisor of given numbers.'
+
+
+def start_game():
     num_one = randomint()
     num_two = randomint()
     game_parts = {}
-    game_parts['instruction'] = 'Find the greatest common' \
-                                'divisor of given numbers.'
     game_parts['quest'] = str(num_one) + ' ' + str(num_two)
     while num_one != 0 and num_two != 0:
         if num_one > num_two:

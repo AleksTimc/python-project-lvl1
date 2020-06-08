@@ -5,7 +5,6 @@ import random
 def welcome_user():
     print()
     name = prompt.string('May I have your name? ')
-    print("Hello, {}!". format(name))
     return name
 
 
@@ -40,13 +39,13 @@ def greet():
 
 def game_engine2(game):
     greet()
-    game_explain = game()
-    print(game_explain['instruction'])
+    print(game.INSTRUCTION)
     name = welcome_user()
+    print("Hello, {}!". format(name))
     rounds = 3
     attempt = 0
     while attempt < rounds:
-        result = game()
+        result = game.start_game()
         print('Question: ' + str(result['quest']))
         quest_answer = answer()
         if str(quest_answer) == str(result['true_answer']):

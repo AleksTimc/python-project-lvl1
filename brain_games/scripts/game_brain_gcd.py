@@ -1,5 +1,5 @@
 from brain_games.cli import game_engine2
-from brain_games.games.brain_gcd import brain_gcd
+from brain_games.games import brain_gcd
 
 
 def main():
