@@ -3,3 +3,5 @@ __pycache__
 dist/
 *.pyc
 .venv/
+.DS_Store
+brain_games/scripts/.DS_Store
