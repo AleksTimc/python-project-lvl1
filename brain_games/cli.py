@@ -2,12 +2,6 @@ import prompt
 import random
 
 
-def welcome_user():
-    print()
-    name = prompt.string('May I have your name? ')
-    return name
-
-
 def answer():
     answer = prompt.string('Your answer: ')
     return answer
@@ -18,29 +12,11 @@ def randomint():
     return randomint
 
 
-def randstep():
-    randstep = random.randint(1, 10)
-    return randstep
-
-
-def randstep_quest():
-    randstep_quest = random.randint(0, 9)
-    return randstep_quest
-
-
-def rand_operator():
-    operatorlist = ['*', '+', '-']
-    return random.choice(operatorlist)
-
-
-def greet():
-    print('Welcome to the Brain Games!')
-
-
 def game_engine2(game):
-    greet()
+    print('Welcome to the Brain Games!')
     print(game.INSTRUCTION)
-    name = welcome_user()
+    print()
+    name = prompt.string('May I have your name? ')
     print("Hello, {}!". format(name))
     rounds = 3
     attempt = 0
