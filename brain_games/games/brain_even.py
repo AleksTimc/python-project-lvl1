@@ -13,7 +13,7 @@ def is_even(number):
 
 def generate():
     random = randomint()
-    if is_even(random) is True:
+    if is_even(random):
         return random, 'yes'
     else:
         return random, 'no'

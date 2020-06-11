@@ -14,7 +14,7 @@ def is_prime(number):
 
 def generate():
     random = randomint()
-    if is_prime(random) is False:
-        return random, 'no'
-    else:
+    if is_prime(random):
         return random, 'yes'
+    else:
+        return random, 'no'
