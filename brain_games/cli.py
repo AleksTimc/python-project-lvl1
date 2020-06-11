@@ -21,15 +21,15 @@ def game_engine2(game):
     rounds = 3
     attempt = 0
     while attempt < rounds:
-        result = game.start_game()
-        print('Question: ' + str(result['quest']))
+        question, true_answer = game.generate()
+        print('Question: ' + str(question))
         quest_answer = answer()
-        if str(quest_answer) == str(result['true_answer']):
+        if str(quest_answer) == str(true_answer):
             print('Correct!')
             attempt += 1
         else:
             print(str(quest_answer) + " is wrong answer ;(."
-                  "Correct answer was " + str(result['true_answer']) + ".")
+                  "Correct answer was " + str(true_answer) + ".")
             print("Let's try again," + name)
             break
     if attempt == rounds:

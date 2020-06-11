@@ -4,16 +4,16 @@ from brain_games.cli import randomint
 INSTRUCTION = 'Answer "yes" if given number is prime. Otherwise answer "no"'
 
 
-def even_data(number):
+def is_even(number):
     if number % 2 == 0:
-        return 'yes'
+        return True
     else:
-        return 'no'
+        return False
 
 
-def start_game():
+def generate():
     random = randomint()
-    game_parts = {}
-    game_parts['quest'] = random
-    game_parts['true_answer'] = even_data(random)
-    return game_parts
+    if is_even(random) is True:
+        return random, 'yes'
+    else:
+        return random, 'no'

@@ -7,14 +7,14 @@ INSTRUCTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 def is_prime(number):
     for digit in range(2, number):
         if (number % digit) == 0:
-            return 'no'
+            return False
         elif (number // digit) == 1:
-            return 'yes'
+            return True
 
 
-def start_game():
+def generate():
     random = randomint()
-    game_parts = {}
-    game_parts['quest'] = random
-    game_parts['true_answer'] = is_prime(random)
-    return game_parts
+    if is_prime(random) is False:
+        return random, 'no'
+    else:
+        return random, 'yes'

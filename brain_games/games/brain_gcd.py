@@ -13,10 +13,9 @@ def gcd_data(number1, number2):
     return number1 + number2
 
 
-def start_game():
+def generate():
     num_one = randomint()
     num_two = randomint()
-    game_parts = {}
-    game_parts['quest'] = str(num_one) + ' ' + str(num_two)
-    game_parts['true_answer'] = gcd_data(num_one, num_two)
-    return game_parts
+    quest = str(num_one) + ' ' + str(num_two)
+    true_answer = gcd_data(num_one, num_two)
+    return quest, true_answer

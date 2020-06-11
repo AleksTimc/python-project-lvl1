@@ -1,34 +1,17 @@
-from brain_games.cli import randomint
 import random
 
 
 INSTRUCTION = 'What number is missing in the progression?'
 
 
-def randstep_quest():
-    randstep_quest = random.randint(0, 9)
-    return randstep_quest
-
-
-def randstep():
-    randstep = random.randint(1, 10)
-    return randstep
-
-
-def progression_data(start_number):
-    step_number = randstep()
-    end_number = step_number * 10 + start_number
-    step_for_quest = randstep_quest()
-    quest = list(range(start_number, end_number, step_number))
-    quest2 = list(range(start_number, end_number, step_number))
-    quest2[step_for_quest] = '..'
-    quest_str = ' '.join(str(element) for element in quest2)
-    true_answer = quest[step_for_quest]
-    return quest_str, true_answer
-
-
-def start_game():
-    num_one = randomint()
-    game_parts = {}
-    game_parts['quest'], game_parts['true_answer'] = progression_data(num_one)
-    return game_parts
+def generate():
+    start_number = random.randint(1, 50)
+    step_number = random.randint(1, 10)
+    progression_lenght = 10
+    step_for_quest = random.randint(0, 9)
+    end_number = step_number * progression_lenght + start_number
+    progression_list = list(range(start_number, end_number, step_number))
+    missing_digit = progression_list[step_for_quest]
+    progression_list[step_for_quest] = '..'
+    progression_quest = ' '.join(str(element) for element in progression_list)
+    return progression_quest, missing_digit
