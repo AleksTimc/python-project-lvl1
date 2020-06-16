@@ -12,16 +12,16 @@ def randomint():
     return randomint
 
 
-def game_engine2(game):
+def game_engine(game):
     print('Welcome to the Brain Games!')
     print(game.INSTRUCTION)
     print()
     name = prompt.string('May I have your name? ')
     print("Hello, {}!". format(name))
-    rounds = 3
+    rounds_count = 3
     attempt = 0
-    while attempt < rounds:
-        question, true_answer = game.generate()
+    while attempt < rounds_count:
+        question, true_answer = game.generate_data()
         print('Question: ' + str(question))
         quest_answer = answer()
         if str(quest_answer) == str(true_answer):
@@ -32,5 +32,5 @@ def game_engine2(game):
                   "Correct answer was " + str(true_answer) + ".")
             print("Let's try again," + name)
             break
-    if attempt == rounds:
+    if attempt == rounds_count:
         print('Congratulations, ' + name)

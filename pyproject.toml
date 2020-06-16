@@ -21,11 +21,11 @@ pylint = "^2.5.2"
 flake8 = "^3.8.1"
 
 [tool.poetry.scripts]
-brain-even = "brain_games.scripts.game_brain_even:main"
-brain-calc = "brain_games.scripts.game_brain_calc:main"
-brain-gcd = "brain_games.scripts.game_brain_gcd:main"
-brain-progressive = "brain_games.scripts.game_brain_progressive:main"
-brain-isprime = "brain_games.scripts.game_is_prime:main"
+brain-even = "brain_games.scripts.game_even:main"
+brain-calc = "brain_games.scripts.game_calc:main"
+brain-gcd = "brain_games.scripts.game_gcd:main"
+brain-progressive = "brain_games.scripts.game_progressive:main"
+brain-prime = "brain_games.scripts.game_prime:main"
 
 [build-system]
 requires = ["poetry>=0.12"]
