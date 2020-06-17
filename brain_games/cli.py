@@ -1,5 +1,4 @@
 import prompt
-import random
 
 
 def receive_answer():
