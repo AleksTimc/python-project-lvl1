@@ -2,14 +2,9 @@ import prompt
 import random
 
 
-def answer():
+def receive_answer():
     answer = prompt.string('Your answer: ')
     return answer
-
-
-def randomint():
-    randomint = random.randint(1, 50)
-    return randomint
 
 
 def game_engine(game):
@@ -23,7 +18,7 @@ def game_engine(game):
     while attempt < rounds_count:
         question, true_answer = game.generate_data()
         print('Question: ' + str(question))
-        quest_answer = answer()
+        quest_answer = receive_answer()
         if str(quest_answer) == str(true_answer):
             print('Correct!')
             attempt += 1
