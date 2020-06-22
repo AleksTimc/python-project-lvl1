@@ -24,7 +24,7 @@ flake8 = "^3.8.1"
 brain-even = "brain_games.scripts.game_even:main"
 brain-calc = "brain_games.scripts.game_calc:main"
 brain-gcd = "brain_games.scripts.game_gcd:main"
-brain-progressive = "brain_games.scripts.game_progressive:main"
+brain-progression = "brain_games.scripts.game_progression:main"
 brain-prime = "brain_games.scripts.game_prime:main"
 
 [build-system]

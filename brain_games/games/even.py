@@ -11,8 +11,7 @@ def is_even(number):
 
 def generate_data():
     random_number = random.randint(1, 50)
+    true_answer = 'no'
     if is_even(random_number):
         true_answer = 'yes'
-        return random_number, true_answer
-    true_answer = 'no'
     return random_number, true_answer

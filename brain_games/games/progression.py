@@ -11,7 +11,7 @@ def generate_data():
     step_for_quest = random.randint(0, progression_lenght-1)
     end_number = step_number * progression_lenght + start_number
     progression_list = list(range(start_number, end_number, step_number))
-    true_answer = progression_list[step_for_quest]
+    true_answer = str(progression_list[step_for_quest])
     progression_list[step_for_quest] = '..'
     progression_quest = ' '.join(str(element) for element in progression_list)
     return progression_quest, true_answer

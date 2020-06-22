@@ -17,5 +17,5 @@ def generate_data():
     num_one = random.randint(1, 50)
     num_two = random.randint(1, 50)
     quest = str(num_one) + ' ' + str(num_two)
-    true_answer = gcd(num_one, num_two)
+    true_answer = str(gcd(num_one, num_two))
     return quest, true_answer
