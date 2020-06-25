@@ -1,5 +1,8 @@
 import prompt
-from brain_games.cli import receive_answer
+
+def receive_answer():
+    answer = prompt.string('Your answer: ')
+    return answer
 
 
 def game_engine(game):
@@ -21,6 +24,5 @@ def game_engine(game):
             print(str(quest_answer) + " is wrong answer ;(."
                   "Correct answer was " + str(true_answer) + ".")
             print("Let's try again," + name)
-            break
-    if attempt == rounds_count:
-        print('Congratulations, ' + name)
+            return
+    print('Congratulations, ' + name)
