@@ -1,11 +1,6 @@
 import prompt
 
 
-def receive_answer():
-    answer = prompt.string('Your answer: ')
-    return answer
-
-
 def game_engine(game):
     print('Welcome to the Brain Games!')
     print(game.INSTRUCTION)
@@ -17,13 +12,13 @@ def game_engine(game):
     while attempt < rounds_count:
         question, true_answer = game.generate_data()
         print('Question: ' + str(question))
-        quest_answer = receive_answer()
-        if quest_answer == true_answer:
+        answer = prompt.string('Your answer: ')
+        if answer == true_answer:
             print('Correct!')
             attempt += 1
         else:
-            print(str(quest_answer) + " is wrong answer ;(."
+            print(str(answer) + " is wrong answer ;(."
                   "Correct answer was " + str(true_answer) + ".")
-            print("Let's try again," + name)
+            print("Let's try again, " + name)
             return
     print('Congratulations, ' + name)

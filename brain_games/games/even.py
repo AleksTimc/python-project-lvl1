@@ -9,8 +9,8 @@ def is_even(number):
 
 
 def generate_data():
-    game_question = random.randint(1, 50)
+    question = random.randint(1, 50)
     true_answer = 'no'
-    if is_even(game_question):
+    if is_even(question):
         true_answer = 'yes'
-    return game_question, true_answer
+    return question, true_answer

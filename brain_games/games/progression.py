@@ -13,5 +13,5 @@ def generate_data():
     progression_list = list(range(start_number, end_number, step_number))
     true_answer = str(progression_list[step_for_quest])
     progression_list[step_for_quest] = '..'
-    progression_quest = ' '.join(str(element) for element in progression_list)
-    return progression_quest, true_answer
+    question = ' '.join(str(element) for element in progression_list)
+    return question, true_answer

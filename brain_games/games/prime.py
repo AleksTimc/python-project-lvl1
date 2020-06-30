@@ -6,16 +6,23 @@ INSTRUCTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 def is_prime(number):
     if number < 2:
         return False
-    for digit in range(2, int(number / 2)):
-        if (number % digit) == 0:
-            return False
-        elif (number // digit) == 1:
+    if number == 2:
+        return True
+    if number > 2 and number <= 5:
+        for digit in range(2, number):
+            if number % digit == 0:
+                return False
+            return True
+    if number > 5:
+        for digit in range(2, round(number / 2)):
+            if number % digit == 0:
+                return False
             return True
 
 
 def generate_data():
-    random_number = random.randint(1, 50)
+    question = random.randint(1, 50)
     true_answer = 'no'
-    if is_prime(random_number):
+    if is_prime(question):
         true_answer = 'yes'
-    return random_number, true_answer
+    return question, true_answer
